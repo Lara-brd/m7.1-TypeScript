@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicles</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/myStyle.css">
+
+</head>
+
+
+<body>
+  <!-- cabecera -->
+  <nav class="navbar navbar-dark">
+    <a href="/" class="navbar-brand">VEHICLES</a>
+    <div id="message"></div>
+  </nav>
+
+  <div class="container">
+    <div class="row mt-5" id="app">
+
+      <!-- FORMULARIOS -->
+      <div class="col-12 p-3 mb-3">
+        <div id="card-car" class="card border-info">
+          <div class="card-header text-info">
+            <h4>Enter a New Car</h4>
+          </div>
+          <!-- form Car -->
+          <form id="formCar" action="registrar.php" class="card-body item-form-car">
+            <div class="row m-2 justify-content-center">
+              <div class="col-lg-3 py-2">
+                <input id="plate" type="text" placeholder="PLATE" class="form-control text-light inputCar">
+                <div class="invalid-feedback errorPlate"></div>
+              </div>              
+              <div class="col-lg-3 py-2">
+                <input id="color" type="text" placeholder="COLOR" class="form-control text-light inputCar">
+                <div class="invalid-feedback errorColor"></div>
+              </div>
+              <div class="col-lg-3 py-2">
+                <input id="brand" type="text" placeholder="BRAND" class="form-control text-light inputCar">
+                <div class="invalid-feedback errorBrand"></div>
+              </div>
+              <hr class="d-lg-none my-4" />
+              <div class="col-lg-3 py-2">
+                <input type="submit" class="btn btn-info w-100" value = "SUBMIT">
+              </div>
+            </div>          
+          </form>  
+        </div>
+        <!--Form Wheelss -->
+        <div id="card-wheel" class="card border-info">
+          <div class="card-header text-info">
+            <h4>Enter wheels Information</h4>
+          </div>
+          <form id="formWheels" class="card-body item-form-wheel">
+            <div class="row m-2">
+              <div class="col-sm-6 col-lg-3">
+                <label for="diameter1">Wheel 1</label>
+                <input id="diameter1" type="number" placeholder="DIAMETER"; class="form-control text-info diameter" step="0.01" >
+                <div class="invalid-feedback errorDiam"></div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label for="brandw1">Wheel 1</label>
+                <input id="brandw1" type="text" placeholder="BRAND" class="form-control text-info brandWheel">
+                <div class="invalid-feedback errorBrand"></div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label for="diameter2">Wheel 2</label>
+                <input id="diameter2" type="number" placeholder="DIAMETER" class="form-control text-info diameter" step ="0.01" >
+                <div class="invalid-feedback errorDiam"></div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label for="brandw2">Wheel 2</label>
+                <input id="brandw2" type="text" placeholder="BRAND" class="form-control text-info brandWheel">
+                <div class="invalid-feedback errorBrand"></div>
+              </div>
+            </div> 
+            <div class="row m-2">
+              <div class="col-sm-6 col-lg-3">
+                <label for="diameter3">Wheel 3</label>
+                <input id="diameter3" type="number" placeholder="DIAMETER" class="form-control text-info diameter" step="0.01" >
+                <div class="invalid-feedback errorDiam"></div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label for="brandw3">Wheel 3</label>
+                <input id="brandw3" type="text" placeholder="BRAND" class="form-control text-info brandWheel">
+                <div class="invalid-feedback errorBrand"></div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <label for="diameter4">Wheel 4</label>
+                <input id="diameter4" type="number" placeholder="DIAMETER" class="form-control text-info diameter" step="0.01">
+                <div class="invalid-feedback errorDiam"></div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <labez for="brandw4">Wheel 3</labez>
+                <input id="brandw4" type="text" placeholder="BRAND" class="form-control text-info brandWheel">
+                <div class="invalid-feedback errorBrand"></div>
+              </div>
+              <hr class="my-4"/>
+              <div class="col-lg-4 text-center">
+                <input id="btnWheels" type="submit" class="btn btn-info w-100" value = "SUBMIT">
+              </div>
+            </div>
+          </form>
+        </div> 
+          
+  </div> <!-- fin formularios -->
+
+      <div class="col-12">
+        <div id="car-list">
+        <!-- Info Coche -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+<!--//////////    SCRIPTS   //////////////////////////////////////////  -->
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/65c85190ca.js" crossorigin="anonymous"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+
+
+  <script defer src = "../models/wheel.js"></script>
+  <script defer src = "../models/car.js"></script>
+  <script defer src="../controllers/controller.js"></script>
+
+</body>
+</html>
