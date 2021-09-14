@@ -29,7 +29,7 @@ const btnRocket1 = document.getElementById('btnRocket1') as HTMLButtonElement,
 
 //create rocket 1
 let pressbtn1 = false;
-btnRocket1.addEventListener('click', function(){
+btnRocket1.addEventListener('click', function(event){
   if(!pressbtn1){
     createRocket('32WESSDS', 3);
     rocket.thrusters.push(10, 30, 80);
@@ -39,7 +39,9 @@ btnRocket1.addEventListener('click', function(){
     // panel.textContent = 'result'+ speed
     pressbtn1 = true;
   }
+
 });
+
 
 
 //create rocket2
@@ -113,6 +115,8 @@ printRocket2.addEventListener('click', function(){
   }
 });
 
+//game.html
+
 
 
 //////////////////////////////////
@@ -128,7 +132,13 @@ function createRocket(code:string, thrustersNum:number){
 //panel aceleracion
 
 function uiSpeed(panel:HTMLDivElement, currentPower:number){
-panel.textContent = 'power '+ currentPower
+panel.textContent = 'power '+ currentPower;
+}
+
+
+//game html functions
+function ignition(){
+
 }
 
 
