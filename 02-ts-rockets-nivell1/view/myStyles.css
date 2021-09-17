@@ -1,0 +1,12 @@
+
+.bg-img{
+  background-image: url(../src/space2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.mybtnR{
+  background-color:rgba(255, 255, 255, 0.089);
+}
